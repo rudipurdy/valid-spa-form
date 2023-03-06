@@ -1,0 +1,1244 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #EEF0F2;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+//---------------------------//
+
+//main
+
+.payform_page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 8%;
+  // overflow: hidden;
+    -webkit-touch-callout: none; 
+      -webkit-user-select: none; 
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none; 
+              user-select: none; 
+                      
+  
+
+  #cost.closed{
+    background-color: #F2F7FF;
+    width: 170px;
+    height: 62px;
+    border-radius: 15px;
+    color: rgba(0, 102, 255, 1);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+
+    img.close{
+      display: block;
+    }
+
+    img.open{
+      display: none;
+    }
+  }
+
+  #cost{
+    background-color: #F2F7FF;
+    width: 170px;
+    height: 62px;
+    border-radius: 15px;
+    color: rgba(0, 102, 255, 1);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+
+    img.open {
+      display: block;
+    }
+
+    img.close{
+      display: none;
+    }
+  }
+}
+  
+
+  .main_wrapper.loading{
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+    height: 549px;
+    margin-top: 36px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.04);
+    align-items: center;
+    row-gap: 20px;
+    box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.09);
+    align-items: center;
+    justify-content: center;
+        
+
+    .loading{
+      animation: showLoading 1.5s ease-in-out;
+      @keyframes showLoading {
+        
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+
+
+    //анимация загрузки 
+    .loader {
+      width: 41px;
+      height: 41px;
+      border: 4px solid #0066FF;;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+      margin-top: 2px;
+    }
+  
+    @keyframes rotation {
+      0% {transform: rotate(0deg)}
+      100% {transform: rotate(360deg)}
+    } 
+    
+
+    .qiwi_umoney_form{
+      display: none;
+    }
+    .card_form{
+      display: none;
+    }
+    .main{
+      display: none;
+    }
+  }
+
+
+  .main_wrapper.step2-card{
+
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+    height: 549px;
+    margin-top: 36px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.04);
+    align-items: center;
+    row-gap: 20px;
+    box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.09);
+    position: relative;
+
+    .pay_btn:hover{
+      transition: 0.3s;
+      background-color: #3082fc;
+    }
+    
+    
+    .card_form{
+      animation: showCardForm 0.5s ease-in-out;
+      @keyframes showCardForm {
+        
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+
+
+    .main{
+      display: none;
+    }
+
+    .qiwi_umoney_form{
+      display: none;
+      position: relative;
+    }
+
+  }
+
+  .main_wrapper.step2-qiwi_umoney{
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+    height: 341px;
+    margin-top: 36px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.04);
+    align-items: center;
+    row-gap: 20px;
+    box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.09);
+    position: relative;
+
+    .card_form{
+      display: none;
+    }
+
+    .main{
+      display: none;
+    }
+    
+
+    .qiwi_umoney_form{
+      animation: showQiwiUmoney 0.5s ease-in-out;
+      @keyframes showQiwiUmoney {
+        
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+
+    .qiwi_umoney_form_content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    
+      .back_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFF;
+        box-shadow: 0px 4.91803px 18.4426px rgba(126, 137, 153, 0.17);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        left: -25%;
+        top: 35px;
+        cursor: pointer;
+      }
+
+      input{
+        margin-top: 34px;
+      }
+
+
+      .pay_btn{
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        display: flex;
+        color: #FFF;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 122px;
+        height: 53px;
+        background-color: #0066FF;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .pay_btn:hover{
+        transition: 0.3s;
+        background-color: #3082fc;
+      }
+    }
+  }
+
+
+
+  .main_wrapper.step1{
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+    height: 472px;
+    margin-top: 36px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.04);
+    align-items: center;
+    row-gap: 20px;
+    box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.09);
+
+
+    .main{
+      animation: showMain 0.5s ease-in-out;
+      @keyframes showMain {
+        
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+  
+    .card_form{
+      display: none;
+    }
+
+    .main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      row-gap: 20px;
+      position: relative;
+    }
+
+    .qiwi_umoney_form{
+      display: none;
+    }
+
+    #arrow{
+      margin-left: 55px;
+      font-weight: bold;
+    }
+
+
+    .card:hover{
+      -webkit-box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      -moz-box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      transition: ease-in-out 0.3s;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      width: 341px;
+      height: 73px;
+      border-radius: 18px;
+      -webkit-box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      -moz-box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      cursor: pointer;
+      margin-top: 12px;
+      transition: ease-in-out 0.3s;
+
+      .card_arrow{
+        margin-left: 11px;
+      }
+
+      p{
+        margin-left: 18px;
+        font-family: 'Montserrat';
+      }
+
+      .circle_card{
+        background-color:rgba(200, 221, 255, 1);
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        border-radius: 50%;
+        margin-left: 21px;
+      }
+    }
+    
+    .qiwi:hover{
+      -webkit-box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      -moz-box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      transition: ease-in-out 0.3s;
+    }
+
+
+    .qiwi {
+      display: flex;
+      align-items: center;
+      width: 341px;
+      height: 73px;
+      border-radius: 18px;
+      cursor: pointer;
+      -webkit-box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      -moz-box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      transition: ease-in-out 0.3s;
+
+      p{
+        margin-left: 18px;
+        font-family: 'Montserrat';
+      }
+
+      .qiwi_arrow{
+        margin-left: 120px;
+      }
+
+      .circle_qiwi{
+        background-color: rgba(255, 235, 211, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        margin-left: 21px;
+      }
+    }
+    
+
+    .umoney:hover{
+      -webkit-box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      -moz-box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      box-shadow: (0px 13px 35px rgba(0, 0, 0, 0.12));
+      transition: ease-in-out 0.3s;
+    }
+
+
+    .umoney {
+      display: flex;
+      align-items: center;
+      width: 341px;
+      height: 73px;
+      border-radius: 18px;
+      cursor: pointer;
+      -webkit-box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      -moz-box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      box-shadow: 0px 7px 20px 0px rgba(34, 60, 80, 0.05);
+      transition: ease-in-out 0.3s;
+      
+      p{
+        margin-left: 18px;
+        font-family: 'Montserrat';
+      }
+
+      .umoney_arrow{
+        margin-left: 87px;
+      }
+
+      .circle_umoney{
+        background-color: rgba(233, 218, 255, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        margin-left: 21px;
+      }
+    }
+  }
+
+
+.logo_title {
+  display: flex;
+  flex-direction: row;
+  width: 177px;
+}
+
+  
+
+//Конец блока main// -------------------------------------------
+
+
+//БЛОК card_form_content//
+
+.card_form_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  align-items: center;
+  position: relative;
+
+  .pay_btn {
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    display: flex;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 122px;
+    height: 53px;
+    background-color: #0066FF;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .back_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    box-shadow: 0px 4.91803px 18.4426px rgba(126, 137, 153, 0.17);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: -25%;
+    top: 35px;
+    cursor: pointer;
+  }
+
+  #safety{
+    width: 260px;
+    color: #00C04D;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0.5;
+    white-space: nowrap;
+    
+    #lock{
+      margin-right: 4px;
+    }
+
+    p{
+      text-align: center;
+      font-family: 'Montserrat';
+      margin-left: 7px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+}
+
+
+
+.input_card_number {
+  position: relative;
+  margin-top: 15px;
+
+  .placeholder-text{ 
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: #adadad;
+    pointer-events: none;
+  }
+
+  #master{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 18px;
+    bottom: 1;
+    opacity: 0;
+    transition: opacity 1s linear;
+  }
+  #master.active{
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
+
+  #mir{
+    position: absolute;
+    right: 18px;
+    top: 7px;
+    opacity:0;
+    transition: opacity 1s linear;
+    width: 30px;
+  }
+  #mir.active{
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
+
+
+  #visa{
+    position: absolute;
+    height: 20px;
+    height: 40px;
+    right: 13px;
+    top: -9px;
+    opacity:0;
+    transition: opacity 1s linear;
+  }
+  #visa.active{
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
+}
+
+
+
+.inputs_date-cvv {
+  display: flex;
+  position: relative;
+  column-gap: 10px;
+}
+
+.input_card_date{
+  position: relative;
+
+  .placeholder-text{ 
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: #adadad;
+    pointer-events: none;
+  }
+}
+
+.input_card_cvv{
+  position: relative;
+
+  .placeholder-text{ 
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+}
+
+
+.input_card_email {
+  position: relative;
+
+.placeholder-text{ 
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: #E2E2E2;
+    pointer-events: none;
+  }
+}
+
+
+
+
+//Стилизация инпутов//
+.input-contain{
+  position: relative;
+}
+
+input::placeholder{
+  color: #E2E2E2;
+}
+
+.area_card_number{
+  width: 324px;
+  height: 53px;
+  border-radius: 14px;
+  border: 1.5px solid #E2E2E2;
+}
+
+.area_card_date{
+  width: 150px;
+  height: 53px;
+  border-radius: 14px;
+  border: 1.5px solid #E2E2E2;
+}
+
+.area_card_cvv{
+  width: 164px;
+  height: 53px;
+  border-radius: 14px;
+  border: 1.5px solid #E2E2E2;
+}
+
+.area_card_email{
+  width: 324px;
+  height: 53px;
+  border-radius: 14px;
+  border: 1.5px solid #E2E2E2;
+  outline: none;
+  outline-offset: 0;
+}
+
+.text{
+  font-size: 16px;
+  background-color: transparent;
+  color: #E2E2E2;
+  transform: translate(0);
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+}
+
+
+input, .placeholder-text{
+  padding: 0 1.2rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+input:focus{
+  font-size: 16px;
+  outline: none;
+  border: 1.5px solid #E2E2E2;
+  font-family: 'Montserrat';
+  border-color: #0066FF;
+}
+
+
+input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+  font-size: 14px;
+  border-color: #0066FF;
+  transform: translate(-8%, -130%);
+  font-family: 'Montserrat';
+  background-color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+input:focus + .placeholder-text .text{
+  color: #0066FF;
+  font-family: 'Montserrat';
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+
+//Конец стилизации инпутов//-----------------------------------------------------------------------
+//конец блока card_main//--------------------------------------------------------------------------
+
+
+//Стилизация всплытия диалогового окна (tooltip)
+
+.tooltip.show{
+  opacity: 1;
+  transition: 0.2s;
+  width: 199px;
+  height: 69px;
+  z-index: 20;
+  p{
+    opacity: 1;
+    transition: 1.4s;
+  }
+}
+
+
+.tooltip {
+  border-radius: 15px;
+  padding: 20px;
+  position: absolute;
+  z-index: 20;
+  top: 90px;
+  background: #fff;
+  color: #fff;
+  filter: drop-shadow(0px 7px 40px rgba(0, 0, 0, 0.07));
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  opacity: 0;
+  transition: 0.2s;
+  width: 199px;
+  height: 0;
+  z-index: -20;
+ }
+
+ .tooltip.show::after, .tooltip.show::before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  left: 139px; top: -9px;
+  width: 20px; height: 20px;
+  z-index: -1; 
+  transform: rotate(45deg); 
+  -webkit-transform: rotate(45deg);
+  border-radius: 3px;
+ }
+
+ .tooltip.show::before {
+  z-index: 1; 
+  box-shadow: none; 
+  transition: 0.2s;
+ }
+
+//Ошибки//
+
+.main_wrapper{
+  transition: 0.3s ease-in-out;
+
+
+  .error{
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+.main_wrapper.error_main_cost{
+  transition: 0.3s ease-in-out;
+  
+  .error{
+    position: absolute;
+    width: 324px;
+    height: 53px;
+    background-color: #FFEDED;
+    border-radius: 26.5px 26.5px 0px 0px;
+    bottom: 0px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FF0000;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    max-height: 100%;
+  }
+}
+
+
+.main_wrapper.error_main_date{
+  transition: 0.3s ease-in-out;
+  
+  .error{
+    position: absolute;
+    width: 324px;
+    height: 53px;
+    background-color: #FFEDED;
+    border-radius: 26.5px 26.5px 0px 0px;
+    bottom: 0px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FF0000;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    max-height: 100%;
+  }
+}
+
+.main_wrapper.error_main_email{
+  transition: 0.3s ease-in-out;
+  
+  .error{
+    position: absolute;
+    width: 324px;
+    height: 53px;
+    background-color: #FFEDED;
+    border-radius: 26.5px 26.5px 0px 0px;
+    bottom: 0px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FF0000;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    max-height: 100%;
+  }
+}
+
+.main_wrapper.error_main_cvv{
+  transition: 0.3s ease-in-out;
+  
+  .error{
+    position: absolute;
+    width: 324px;
+    height: 53px;
+    background-color: #FFEDED;
+    border-radius: 26.5px 26.5px 0px 0px;
+    bottom: 0px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FF0000;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    max-height: 100%;
+  }
+}
+
+.main_wrapper.error_main_number{
+  transition: 0.3s ease-in-out;
+  
+  .error{
+    position: absolute;
+    width: 324px;
+    height: 53px;
+    background-color: #FFEDED;
+    border-radius: 26.5px 26.5px 0px 0px;
+    bottom: 0px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FF0000;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    max-height: 100%;
+  }
+}
+
+input.error-input{
+  background-color: #FFEDED;
+}
+
+//MEDIA
+
+@media (max-width: 320px) and (min-width: 1920px){
+  .payform_page{
+    position: relative;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-height: 640px) {
+  .payform_page{
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 530px) {
+  .main_wrapper{
+    .pay_btn{
+      width: 287px;
+    }
+  }
+
+
+  .main_wrapper.step1{
+    max-width: 353px;
+    height: 472px;  
+
+    .card{
+      max-width: 302px;
+      white-space: nowrap;
+
+      #arrow{
+        margin-left: 20px;
+      }
+    }
+
+    .qiwi{
+      max-width: 302px;
+      white-space: nowrap;
+
+      #arrow{
+        margin-left: 20px;
+      }
+    }
+
+    .umoney{
+      max-width: 302px;
+      white-space: nowrap;
+
+      #arrow{
+        margin-left: 20px;
+      }
+    }
+      
+  }
+
+  .main_wrapper.step2-card{
+    max-width: 353px;
+    height: 545px;
+    
+    .back_btn{
+      left: -16%;
+    }
+  }
+
+
+  .main_wrapper.step2-qiwi_umoney{
+    max-width: 353px;
+
+    .qiwi_umoney_form_content{
+      .back_btn{
+        left: -16%;
+      }
+    }
+  }
+
+
+  .main_wrapper.loading{
+    max-width: 353px;
+  }
+
+  
+  .main_wrapper.error_main_number{
+  
+    .error{
+      width: 298px;
+      bottom: 0px;
+    }
+  }
+
+  .main_wrapper.error_main_email{
+  
+    .error{
+      width: 298px;
+    }
+  }  
+
+  .main_wrapper.error_main_cvv{
+  
+    .error{
+      width: 298px;
+    }
+  } 
+
+  .main_wrapper.error_main_date{
+  
+    .error{
+      width: 298px;
+    }
+  }   
+    
+  .area_card_number{
+    max-width: 287px;
+  }
+
+  .area_card_date{
+    max-width: 138px;
+  }
+  
+  .area_card_cvv{
+    max-width: 138px;
+  }
+    
+  .area_card_email{
+    max-width: 287px;
+  }
+}
+
+
+
+
+
+@media (max-width: 400px) {
+  .main_wrapper{
+    .pay_btn{
+      width: 267px;
+    }
+  }
+  
+  .main_wrapper.error_main_number{
+  
+    .error{
+      width: 278px;
+    }
+  }
+
+  .main_wrapper.error_main_date{
+  
+    .error{
+      width: 278px;
+    }
+  }
+
+  .main_wrapper.error_main_cvv{
+  
+    .error{
+      width: 278px;
+    }
+  }
+
+  .main_wrapper.error_main_email{
+  
+    .error{
+      width: 278px;
+    }
+  }
+
+  .main_wrapper.error_main_cost{
+  
+    .error{
+      width: 278px;
+    }
+  }
+
+  .main_wrapper.step1{
+    max-width: 323px;
+    height: 472px; 
+
+    .card{
+      max-width: 272px;
+      white-space: nowrap;
+
+      #arrow{
+        margin-left: 5px;
+      }
+    }
+
+    .qiwi{
+      max-width: 272px;
+      white-space: nowrap;
+
+      #arrow{
+        margin-left: 5px;
+      }
+    }
+
+    .umoney{
+      max-width: 272px;
+      white-space: nowrap;
+
+      #arrow{
+        margin-left: 5px;
+      }
+    }
+      
+  }
+
+  .main_wrapper.step2-card{
+    max-width: 323px;
+    height: 545px;
+    
+    .back_btn{
+      left: -14%;
+    }
+  }
+
+  .main_wrapper.step2-qiwi_umoney{
+    max-width: 323px;
+
+    .qiwi_umoney_form_content{
+      .back_btn{
+        left: -14%;
+      }
+    }
+  }
+
+  .main_wrapper.loading{
+    max-width: 323px;
+  }
+
+  
+  .area_card_number{
+    max-width: 267px;
+  }
+
+  .area_card_date{
+    max-width: 128px;
+  }
+  
+  .area_card_cvv{
+    max-width: 128px;
+  }
+    
+  .area_card_email{
+    max-width: 267px;
+  }
+}
+

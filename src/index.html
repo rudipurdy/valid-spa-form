@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Главная'
+})
+
+<body>
+  @@include('html/header.html',{})
+   
+
+
+    <main class="payform_page">
+      <div class="logo_title"><img src="img/full-logo.svg" alt="logo"></div>
+      <div class="main_wrapper step1">
+        <div class="main">
+          <div id="cost" class="closed" data-rule="cost"> 1 000 ₽ <img src="img/closed-arrow.svg" class="close" alt=""><img src="img/opened-arrow.svg" class="open" alt=""></div>
+          <span class="tooltip"> <p>Название: <br> Оплата заказа</p></span>
+          <div class="card"><span class="circle_card"><img src="img/card.svg" alt="card"></span> <p>Банковская карта</p> <span class="card_arrow"><img id="arrow" src="img/arrow.svg"></span></div>
+          <div class="qiwi qiwi_umoney_btn"><span class="circle_qiwi"><img src="img/qiwi.svg" alt="qiwi"></span> <p>QIWI</p> <span class="qiwi_arrow"><img id="arrow" src="img/arrow.svg"></span></div>
+          <div class="umoney qiwi_umoney_btn"><span class="circle_umoney"><img src="img/umoney.svg" alt="umoney"></span> <p>Юmoney</p> <span class="umoney_arrow"><img id="arrow" src="img/arrow.svg"></span></div>
+        </div>
+
+        
+        
+
+        <form class="card_form" action="" onsubmit="return false;">
+          <div class="card_form_content">
+            <div class="back_btn"><img src="img/back-arrow.svg" alt=""></div>
+            <div id="cost" class="closed" data-rule="cost"> 1 000 ₽ <img src="img/closed-arrow.svg" class="close" alt=""><img src="img/opened-arrow.svg" class="open" alt=""></div>
+            <span class="tooltip"> <p>Название: <br> Оплата заказа</p></span>
+            <div class="input_card_number">
+              <input type="text" value="" class="area_card_number" onblur="this.placeholder=''" data-rule="number">
+              <label class="placeholder-text" for="fname" id="placeholder-fname">
+                <img src="img/mir-logo.svg" alt="mir" id="mir">
+                <img src="img/mc_symbol.svg" alt="master" id="master">
+                <img src="img/visa-logo.svg" alt="visa" id="visa">
+                <div class="card_number text"> <p>Номер карты</p></div><span class="card_logo"></span>
+              </label>
+            </div>
+
+            <div class="inputs_date-cvv">
+              <div class="input_card_date">
+                <input value="" class="area_card_date" data-rule="date" onblur="this.placeholder=''" maxlength="5">
+                <label class="placeholder-text" for="fname" id="placeholder-fname">
+                  <div class="card_date text">Дата</div>
+                </label>
+              </div>
+              
+              <div class="input_card_cvv">
+                <input type="password" value="" maxlength="3" class="area_card_cvv" data-rule="pass" onblur="this.placeholder=''" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                <label class="placeholder-text" for="fname" id="placeholder-fname">
+                  <div class="card_cvv text">CVV/CVC</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="input_card_email">
+              <input type="email" value="" data-rule="email" class="area_card_email" onblur="this.placeholder=''">
+              <label class="placeholder-text" for="fname" id="placeholder-fname">
+                <div class="card_email text">Введите E-mail</div><span class="card_logo"></span>
+              </label>
+            </div>
+
+            <button type="submit" class="pay_btn">Оплатить</button>
+            <span id="safety"><img src="img/lock.svg" alt="lock" id="lock"> <p>Безопасность работы подтверждена <br> сертификатом PCI DSS</p></span>
+          </div>
+        </form>
+
+        <form action="" class="qiwi_umoney_form" onsubmit="return false;">
+          <div class="qiwi_umoney_form_content">
+            <div class="back_btn"><img src="img/back-arrow.svg" alt=""></div>
+            <div id="cost" class="closed" data-rule="cost"> 1 000 ₽ <img src="img/closed-arrow.svg" class="close" alt=""><img src="img/opened-arrow.svg" class="open" alt=""></div>
+            <span class="tooltip"> <p>Название: <br> Оплата заказа</p></span>
+            <div class="input_card_email">
+              <input type="email" value="" class="area_card_email" data-rule="email" onblur="this.placeholder=''">
+              <label class="placeholder-text" for="fname" id="placeholder-fname">
+                <div class="card_email text">Введите E-mail</div><span class="card_logo"></span>
+              </label>
+            </div>
+            <button type="submit" class="pay_btn">Оплатить</button>
+          </div>
+        </form>
+        
+        <div class="loading">
+          <span class="loader"></span>
+        </div>
+        <div class="error"></div>
+      </div>
+    </main>
+
+
+    
+
+
+  @@include('html/footer.html',{})
+
+  
+  <script src="js/app.min.js"></script>
+</body>
+</html>
+
+    
+   
